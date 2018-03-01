@@ -1,4 +1,7 @@
 # twitter-splitter
+
+[![Build Status](https://travis-ci.org/pnevares/twitter-splitter.svg?branch=master)](https://travis-ci.org/pnevares/twitter-splitter)
+
 Split your text into Twitter-friendly pieces
 
 Usage:
