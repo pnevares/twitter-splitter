@@ -1,0 +1,28 @@
+{
+  "name": "twitter-splitter",
+  "version": "0.0.1",
+  "description": "Split your text into Twitter-friendly lengths",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "twitter",
+    "splitter",
+    "split",
+    "text"
+  ],
+  "author": {
+    "name": "Pablo Nevares",
+    "email": "pablo@nevares.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/pnevares/twitter-splitter"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^22.4.2"
+  }
+}
