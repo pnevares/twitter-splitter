@@ -1,5 +1,5 @@
 # twitter-splitter
-Split text into Tweetable chunks
+Split your text into Twitter-friendly pieces
 
 Usage:
 ```js
