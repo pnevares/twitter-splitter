@@ -1,9 +1,10 @@
 {
   "name": "twitter-splitter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Split your text into Twitter-friendly pieces",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "jest"
   },
   "keywords": [
@@ -23,6 +24,10 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.13.0",
     "jest": "^22.4.2"
   }
 }
