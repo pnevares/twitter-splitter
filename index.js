@@ -1,6 +1,6 @@
 module.exports = (text, limit = 280, joiner = '...') => {
   if (text.length <= limit) {
-    return text;
+    return [text];
   }
 
   let newText = text;

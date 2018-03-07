@@ -3,17 +3,28 @@ const twitterSplitter = require('./index');
 describe('twitter-splitter', () => {
   it('should leave a short string alone with default settings', () => {
     const text = 'This is a short string.';
-    expect(twitterSplitter(text)).toEqual(text);
+    expect(twitterSplitter(text)).toEqual([text]);
   });
 
   it('should leave a string at limit alone with a custom limit', () => {
     const text = 'This string is forty-one characters long.';
-    expect(twitterSplitter(text, 41)).toEqual(text);
+    expect(twitterSplitter(text, 41)).toEqual([text]);
   });
 
   it('should split a string with the default joiner', () => {
     const text = 'Hello world';
-    expect(twitterSplitter(text, 8)).toEqual(['Hello...', '...world']);
+    expect(twitterSplitter(text, 8)).toEqual([
+      'Hello...',
+      '...world',
+    ]);
+  });
+
+  it('should split a short string with custom settings', () => {
+    const text = 'Hello world';
+    expect(twitterSplitter(text, 5, '')).toEqual([
+      'Hello',
+      'world',
+    ]);
   });
 
   it('should split a long string into shorter strings with a custom limit', () => {
@@ -53,5 +64,11 @@ describe('twitter-splitter', () => {
       '[...]very weapons talented teachers (and others) who will be instantly shooting, the sicko will NEVER attack that school. Cowards won’t[...]',
       '[...]go there...problem solved. Must be offensive, defense alone won’t work!',
     ]);
+  });
+
+  it('should use the same character counting method as Twitter', () => {
+    // If café were counted as more than 4 chars, the limit of 7 would force a split at the space
+    const text = 'café 😘';
+    expect(twitterSplitter(text, 7, '')).toEqual([text]);
   });
 });
