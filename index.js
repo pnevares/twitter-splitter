@@ -1,21 +1,22 @@
-module.exports = (text, limit = 280, joiner = "...") => {
-  if(text.length <= limit) {
+module.exports = (text, limit = 280, joiner = '...') => {
+  if (text.length <= limit) {
     return text;
   }
 
+  let newText = text;
   const result = [];
 
   do {
-    const cutoff = text.lastIndexOf(" ", limit - (joiner.length * (result.length? 2 : 1)));
-    let chunk = text.slice(0, cutoff) + joiner;
+    const cutoff = newText.lastIndexOf(' ', limit - (joiner.length * (result.length ? 2 : 1)));
+    let chunk = newText.slice(0, cutoff) + joiner;
     if (result.length) {
       chunk = joiner + chunk;
     }
     result.push(chunk);
-    text = text.slice(cutoff + 1);
-  } while (text.length > limit - joiner.length);
+    newText = newText.slice(cutoff + 1);
+  } while (newText.length > limit - joiner.length);
 
-  result.push(joiner + text);
+  result.push(joiner + newText);
 
   return result;
-}
+};
