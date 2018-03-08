@@ -1,6 +1,7 @@
 # twitter-splitter
 
-[![Build Status](https://travis-ci.org/pnevares/twitter-splitter.svg?branch=master)](https://travis-ci.org/pnevares/twitter-splitter)
+[![Build Status](https://travis-ci.org/pnevares/twitter-splitter.svg?branch=master)](https://travis-ci.org/pnevares/twitter-splitter) [![npm](https://img.shields.io/npm/v/twitter-splitter.svg)](https://www.npmjs.com/package/twitter-splitter)
+
 
 Split your text into Twitter-friendly pieces
 
