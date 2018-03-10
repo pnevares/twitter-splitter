@@ -4,6 +4,7 @@
   "description": "Split your text into Twitter-friendly pieces",
   "main": "index.js",
   "scripts": {
+    "coverage": "jest --coverage",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -11,7 +12,10 @@
     "twitter",
     "splitter",
     "split",
-    "text"
+    "text",
+    "tweets",
+    "140",
+    "280"
   ],
   "author": {
     "name": "Pablo Nevares",
