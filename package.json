@@ -1,6 +1,6 @@
 {
   "name": "twitter-splitter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Split your text into Twitter-friendly pieces",
   "main": "index.js",
   "scripts": {
