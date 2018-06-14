@@ -71,4 +71,14 @@ describe('twitter-splitter', () => {
     const text = 'café 😘';
     expect(twitterSplitter(text, 7, '')).toEqual([text]);
   });
+
+  it('should throw with an impossible limit/joiner combination', () => {
+    const text = 'a b c d';
+    expect(() => twitterSplitter(text, 3, '...')).toThrow(/The text cannot be split/);
+  });
+
+  it('should throw with an impossible limit', () => {
+    const text = 'supercalifragilisticexpialidocious';
+    expect(() => twitterSplitter(text, 5)).toThrow(/The text cannot be split/);
+  });
 });

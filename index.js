@@ -8,6 +8,11 @@ module.exports = (text, limit = 280, joiner = '...') => {
 
   do {
     const cutoff = newText.lastIndexOf(' ', limit - (joiner.length * (result.length ? 2 : 1)));
+
+    if (cutoff === -1) {
+      throw new Error(`The text cannot be split with a limit: ${limit}, joiner: ${joiner}`);
+    }
+
     let chunk = newText.slice(0, cutoff) + joiner;
     if (result.length) {
       chunk = joiner + chunk;
