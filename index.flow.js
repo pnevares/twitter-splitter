@@ -1,6 +1,7 @@
-//
+//@flow
+// test
 
-module.exports = (text, limit = 280, joiner = '...') => {
+module.exports = (text: string, limit?: number = 280, joiner?: string = '...'): Array<string> => {
   if (text.length <= limit) {
     return [text];
   }

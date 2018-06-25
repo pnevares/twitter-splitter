@@ -1,4 +1,4 @@
-const twitterSplitter = require('./index');
+const twitterSplitter = require('./index.flow');
 
 describe('twitter-splitter', () => {
   it('should leave a short string alone with default settings', () => {
